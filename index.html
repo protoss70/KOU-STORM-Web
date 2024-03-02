@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KOU STORM</title>
+
+    <link rel="icon" type="image/png" href="drone.png">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="hero.css">
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="contact.css">
+     <!-- Flag icons CSS -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="./index.html" class="navbar-brand"><img src="logobeyaz.png" class="nav-logo" align="left" title="koustorm.com"></a>
+        <button class="hamburger">&#9776;</button>
+        <ul class="navbar-nav">
+            <li><a href="#about" id="nav-item-about">About Us</a></li>
+            <li><a href="./team.html" id="nav-item-team">Team</a></li>
+            <li><a href="#contact" id="nav-item-contact">Contact</a></li>
+            <li><a href="https://docs.google.com/forms/d/1_XBtqQmpH598Z_V-FLmpnZ16NKAm9jhbIUt3OHWQqEE/edit" id="nav-item-apply" class="active">Apply</a></li>
+            <li>
+                <div class="dropdown">
+                    <button class="dropdown-button" id="selectedLanguage">
+                        <img class="flag" src="https://flagcdn.com/64x48/us.png" alt="US Flag"> English
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="#" onclick="selectLanguage('us', 'English')">
+                            <img class="flag" src="https://flagcdn.com/64x48/us.png" alt="US Flag"> English
+                        </a>
+                        <a href="#" onclick="selectLanguage('tr', 'Türkçe')">
+                            <img class="flag" src="https://flagcdn.com/64x48/tr.png" alt="TR Flag"> Türkçe
+                        </a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="hero-section">
+        <video class="hero-video" autoplay loop muted>
+            <source src="stormvideo.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title" id="hero-item-title">KOU STORM</h1>
+            <p class="hero-subtitle" id="hero-item-subtitle">Unmanned Aerial Vehicle Team</p>
+        </div>
+    </div>
+
+    <!-- About Us section -->
+    <section class="about-section" id="about">
+        <div class="about-container">
+            <h1 class="about-title" id="about-item-title">About Us</h1>
+            <p class="about-description" id="about-item-description">Our team, established in 2021 under Kocaeli University Mechanical Engineering Club, focuses on R&D. We're currently preparing for both TEKNOFEST and SUAS Competition, aiming to advance our university's engineering students in various fields. Our vision is to propel our country and university globally, prioritizing continuous learning and development.</p>
+            <div class="our-team-container">
+                <a href="./team.html" class="btn-our-team" id="about-item-team-description">Our Team</a>
+            </div>
+        </div>
+        <img src="Frame 4.png" alt="About Us Image" class="about-image" width="750">
+    </section>
+
+
+    <div class="contact-section" id="contact">
+        <div class="contact-right">
+            <h1 class="about-title" id="contact-item-title">Contact Us</h1>
+            <div class="contact-form">
+                <form action="#" method="post">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                    <button class="submit-button" type="submit" id="contact-item-button">Send Message</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-inner">
+            <div class="contact-left">
+                <h1 class="about-title" id="about-item-connect">Connect with us</h1>
+                <ul>
+                    <li><a href="https://www.instagram.com/" class="social-a"><i class="fab fa-instagram"></i> Instagram</a></li>
+                    <li><a href="https://www.linkedin.com/" class="social-a"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer" style="background-color: #004D7F; color: white; height: 60px;">
+        
+    </footer>
+
+    <script>
+        // Function to handle language selection
+        function selectLanguage(countryCode, language) {
+            document.getElementById('selectedLanguage').innerHTML = '<img class="flag" src="https://flagcdn.com/64x48/' + countryCode + '.png" alt="' + countryCode.toUpperCase() + ' Flag"> ' + language;
+            if (countryCode === 'us') {
+                us();
+            } else if (countryCode === 'tr') {
+                tr();
+            }
+        }
+
+        const langObject = {
+            nav: {
+                about: ["About", "Hakkımızda"],
+                team: ["Team", "Ekip"],
+                contact: ["Contact", "İletişim"],
+                apply: ["Apply", "Başvur"]
+            },
+
+            hero: {
+                title: ["KOU STORM", "KOU STORM"],
+                subtitle: ["Unmanned Aerial Vehicle Team", "İnsansız Hava Aracı Takımı"]
+            },
+
+            about: {
+                title: ["About Us", "Hakkımızda"],
+                description: ["Our team, established in 2021 under Kocaeli University Mechanical Engineering Club, focuses on R&D. We're currently preparing for both TEKNOFEST and SUAS Competition, aiming to advance our university's engineering students in various fields. Our vision is to propel our country and university globally, prioritizing continuous learning and development."
+                                , "Takımımız, 2021 yılında Kocaeli Üniversitesi Makine Mühendisliği Kulübü bünyesinde kuruldu ve Ar-Ge'ye odaklanmaktadır. Şu anda hem TEKNOFEST hem de SUAS Yarışması için hazırlıklar yapıyoruz ve üniversitemizin mühendislik öğrencilerini çeşitli alanlarda ilerletmeyi amaçlıyoruz. Vizyonumuz, sürekli öğrenmeyi ve gelişmeyi önceliklendirerek ülkemizi ve üniversitemizi küresel ölçekte ileriye taşımaktır."],
+                team: ["Our Team", "Takımımız"],
+
+            },
+            
+            contact: {
+                title: ["Contact Us", "Bize Ulaşın"],
+                send: ["Send Message", "Mesaj Gönder"],
+                connect: ["Connect with us", "Bizimle Bağlantı Kurun"]
+            },
+        }
+    
+        // Function to execute when US flag is selected
+        function us() {
+            // Your logic for when US flag is selected
+            console.log('US flag selected');
+            document.getElementById("nav-item-about").textContent = langObject.nav.about[0]
+            document.getElementById("nav-item-team").textContent = langObject.nav.team[0]
+            document.getElementById("nav-item-contact").textContent = langObject.nav.contact[0]
+            document.getElementById("nav-item-apply").textContent = langObject.nav.apply[0]
+
+            document.getElementById("hero-item-title").textContent = langObject.hero.title[0]
+            document.getElementById("hero-item-subtitle").textContent = langObject.hero.subtitle[0]
+            
+            document.getElementById("about-item-title").textContent = langObject.about.title[0]
+            document.getElementById("about-item-description").textContent = langObject.about.description[0]
+            document.getElementById("about-item-team-description").textContent = langObject.about.team[0]
+            
+            document.getElementById("contact-item-title").textContent = langObject.contact.title[0]
+            document.getElementById("contact-item-button").textContent = langObject.contact.send[0]
+            document.getElementById("about-item-connect").textContent = langObject.contact.connect[0]
+        }
+    
+        // Function to execute when Turkish flag is selected
+        function tr() {
+            // Your logic for when Turkish flag is selected
+            console.log('Turkish flag selected');
+            document.getElementById("nav-item-about").textContent = langObject.nav.about[1]
+            document.getElementById("nav-item-team").textContent = langObject.nav.team[1]
+            document.getElementById("nav-item-contact").textContent = langObject.nav.contact[1]
+            document.getElementById("nav-item-apply").textContent = langObject.nav.apply[1]
+
+            document.getElementById("hero-item-title").textContent = langObject.hero.title[1]
+            document.getElementById("hero-item-subtitle").textContent = langObject.hero.subtitle[1]
+            
+            document.getElementById("about-item-title").textContent = langObject.about.title[1]
+            document.getElementById("about-item-description").textContent = langObject.about.description[1]
+            document.getElementById("about-item-team-description").textContent = langObject.about.team[1]
+            
+            document.getElementById("contact-item-title").textContent = langObject.contact.title[1]
+            document.getElementById("contact-item-button").textContent = langObject.contact.send[1]
+            document.getElementById("about-item-connect").textContent = langObject.contact.connect[1]
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+        var hamburger = document.querySelector('.hamburger');
+        var navbar = document.querySelector('.navbar-nav');
+
+        hamburger.addEventListener('click', function () {
+            navbar.classList.toggle('active');
+        });
+    });
+    </script>
+</body>
+</html>

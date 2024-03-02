@@ -1,0 +1,85 @@
+        /* Styles for the About Us section */
+        .about-section {
+            padding: 50px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row-reverse; /* Reverses the order of items */
+            text-align: left;
+        }
+
+        .about-image {
+            max-width: 100%;
+            height: auto;
+            margin-right: 30px; /* Add margin to separate image from text */
+            border-radius: 8px;
+            /* box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); Optional: Add a subtle shadow */
+        }
+
+        .about-description {
+            font-size: 1.2em;
+            line-height: 1.6;
+            max-width: 60%; /* Limit the width of the text to leave space for the image */
+        }
+
+        .btn-our-team {
+            background-color: #FFA500; /* Use primary color */
+            color: #fff;
+            padding: 15px 30px;
+            font-size: 1em;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .about-container{
+            margin-bottom: 20px;
+        }
+
+        .about-title {
+            font-size: 2.5em;
+            text-wrap: nowrap;
+            margin-bottom: 20px;
+            color: #004D7F; /* Use primary color */
+        }
+
+        .btn-our-team:hover {
+            background-color: #dc8f00; /* Darken the color on hover */
+        }
+
+        .our-team-container{
+            display: flex;
+            justify-content: end;
+            max-width: 55%;
+        }
+
+        .about-description{
+            font-size: 18px;
+        }
+
+        @media (max-width: 1300px) {
+            .about-section {
+                flex-direction: column; /* Stack items vertically on smaller screens */
+                text-align: center;
+            }
+
+            .our-team-container{
+                width: 100%;
+                max-width: unset;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .about-image {
+                margin-right: 0; /* Remove margin on smaller screens */
+                margin-bottom: 20px; /* Add margin at the bottom of the image */
+            }
+
+            .about-description {
+                max-width: 100%;
+                padding: 0 10%;
+                text-align: left;
+            }
+        }
