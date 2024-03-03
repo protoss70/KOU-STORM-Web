@@ -45,3 +45,9 @@
     justify-content: center;
     align-items: center;
 }
+
+@media screen and (max-width: 800px) {
+    .member-card {
+        width: calc(100% / 2 - 20px);
+    }
+}

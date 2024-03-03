@@ -73,7 +73,7 @@
         </div>
         <div class="member-card">
             <div class="image-container">
-                <img src="dogukan.png" alt="Member 1">
+                <img src="umut.png" alt="Member 1">
             </div>
             <div class="member-info">
                 <div class="member-name">Doğukan Demirhan</div>
@@ -85,7 +85,7 @@
         </div>
         <div class="member-card">
             <div class="image-container">
-                <img src="umut.png" alt="Member 1">
+                <img src="dogukan.png" alt="Member 1">
             </div>
             <div class="member-info">
                 <div class="member-name">Umut Şengüç</div>
@@ -202,6 +202,15 @@
                 element.innerText = langObject.titles.electronics[1];
             });
         }
+        
+        document.addEventListener('DOMContentLoaded', function () {
+            var hamburger = document.querySelector('.hamburger');
+            var navbar = document.querySelector('.navbar-nav');
+
+            hamburger.addEventListener('click', function () {
+                navbar.classList.toggle('active');
+            });
+        });
 
     </script>
 </body>
