@@ -70,10 +70,10 @@
         <div class="contact-right">
             <h1 class="about-title" id="contact-item-title">Contact Us</h1>
             <div class="contact-form">
-                <form action="#" method="post">
-                    <input type="text" name="name" placeholder="Your Name" required>
-                    <input type="email" name="email" placeholder="Your Email" required>
-                    <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                <form id="message-form" action="#" method="post">
+                    <input type="text" id="message-name" name="name" placeholder="Your Name" required>
+                    <input type="email" id="message-email" name="email" placeholder="Your Email" required>
+                    <textarea name="message" id="message-text" placeholder="Your Message" rows="5" required></textarea>
                     <button class="submit-button" type="submit" id="contact-item-button">Send Message</button>
                 </form>
             </div>
@@ -82,8 +82,8 @@
             <div class="contact-left">
                 <h1 class="about-title" id="about-item-connect">Connect with us</h1>
                 <ul>
-                    <li><a href="https://www.instagram.com/" class="social-a"><i class="fab fa-instagram"></i> Instagram</a></li>
-                    <li><a href="https://www.linkedin.com/" class="social-a"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+                    <li><a href="https://www.instagram.com/koustormuav/" target='_blank' class="social-a"><i class="fab fa-instagram"></i> Instagram</a></li>
+                    <li><a href="https://www.linkedin.com/company/kou-storm-uav" target='_blank' class="social-a"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
                 </ul>
             </div>
         </div>
@@ -130,10 +130,22 @@
                 send: ["Send Message", "Mesaj Gönder"],
                 connect: ["Connect with us", "Bizimle Bağlantı Kurun"]
             },
+
+            form: {
+                name: ["Your Name", "Adınız"],
+                message: ["Your Message", "Mesajınız"],
+                email: ["Your Email", "E-posta adresiniz"]
+            }
         }
     
+        if(localStorage.getItem('KOU-lang') == "tr"){
+            tr();
+            selectLanguage('tr', 'Türkçe')
+        }
+
         // Function to execute when US flag is selected
         function us() {
+            localStorage.setItem('KOU-lang', 'en');
             // Your logic for when US flag is selected
             console.log('US flag selected');
             document.getElementById("nav-item-about").textContent = langObject.nav.about[0]
@@ -151,10 +163,15 @@
             document.getElementById("contact-item-title").textContent = langObject.contact.title[0]
             document.getElementById("contact-item-button").textContent = langObject.contact.send[0]
             document.getElementById("about-item-connect").textContent = langObject.contact.connect[0]
+
+            document.getElementById("message-name").textContent = langObject.form.name[0]
+            document.getElementById("message-email").textContent = langObject.form.email[0]
+            document.getElementById("message-text").textContent = langObject.form.message[0]
         }
     
         // Function to execute when Turkish flag is selected
         function tr() {
+            localStorage.setItem('KOU-lang', 'tr');
             // Your logic for when Turkish flag is selected
             console.log('Turkish flag selected');
             document.getElementById("nav-item-about").textContent = langObject.nav.about[1]
@@ -172,6 +189,10 @@
             document.getElementById("contact-item-title").textContent = langObject.contact.title[1]
             document.getElementById("contact-item-button").textContent = langObject.contact.send[1]
             document.getElementById("about-item-connect").textContent = langObject.contact.connect[1]
+
+            document.getElementById("message-name").placeholder = langObject.form.name[1]
+            document.getElementById("message-email").placeholder = langObject.form.email[1]
+            document.getElementById("message-text").placeholder = langObject.form.message[1]
         }
 
         document.addEventListener('DOMContentLoaded', function () {
@@ -181,6 +202,20 @@
         hamburger.addEventListener('click', function () {
             navbar.classList.toggle('active');
         });
+    });
+
+    // Get the form element by its ID
+    const form = document.getElementById('message-form');
+
+    // Add event listener to the form to prevent its default reset behavior
+    form.addEventListener('submit', function(event) {
+        // Prevent the default form reset behavior
+        event.preventDefault();
+
+        const name = document.getElementById("message-name").value;
+        const email = document.getElementById("message-email").value;
+        const message = document.getElementById("message-text").value;
+        
     });
     </script>
 </body>

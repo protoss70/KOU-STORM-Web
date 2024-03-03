@@ -1,5 +1,16 @@
 {
   "projects": {
-    "default": "suas-615da"
-  }
+    "default": "suas-dev"
+  },
+  "targets": {
+    "suas-615da": {
+      "hosting": {
+        "dev": [
+          "suas-dev"
+        ]
+      }
+    }
+  },
+  "etags": {},
+  "target": "dev"
 }

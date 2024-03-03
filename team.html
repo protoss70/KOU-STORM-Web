@@ -40,10 +40,10 @@
                 <img src="simay.png" alt="Member 1">
             </div>
             <div class="member-info">
-                <div class="member-name">John Doe</div>
-                <div class="member-role">Software Engineer</div>
+                <div class="member-name">Simay Angin</div>
+                <div class="member-role member-captain">Team Captain</div>
                 <div class="linkedin-container">
-                    <a href="#"><img class="linkedin-logo" src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn"></a>
+                    <a href="https://www.linkedin.com/in/simay-angin-2a2767233/" target="_blank"><img class="linkedin-logo" src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn"></a>
                 </div>
             </div>
         </div>
@@ -52,10 +52,10 @@
                 <img src="rusin.png" alt="Member 1">
             </div>
             <div class="member-info">
-                <div class="member-name">John Doe</div>
-                <div class="member-role">Software Engineer</div>
+                <div class="member-name">Ruşin Ak</div>
+                <div class="member-role member-electronics">Electronics Team Member</div>
                 <div class="linkedin-container">
-                    <a href="#"><img class="linkedin-logo" src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn"></a>
+                    <a href="https://www.linkedin.com/in/ru%C5%9Fin-ak111/" target="_blank"><img class="linkedin-logo" src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn"></a>
                 </div>
             </div>
         </div>
@@ -64,10 +64,10 @@
                 <img src="furkan.png" alt="Member 1">
             </div>
             <div class="member-info">
-                <div class="member-name">John Doe</div>
-                <div class="member-role">Software Engineer</div>
+                <div class="member-name">Muhammet Furkan Özbek</div>
+                <div class="member-role member-software">Software Team Member</div>
                 <div class="linkedin-container">
-                    <a href="#"><img class="linkedin-logo" src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn"></a>
+                    <a href="https://www.linkedin.com/in/furrkanozbek/" target="_blank"><img class="linkedin-logo" src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn"></a>
                 </div>
             </div>
         </div>
@@ -76,10 +76,10 @@
                 <img src="dogukan.png" alt="Member 1">
             </div>
             <div class="member-info">
-                <div class="member-name">John Doe</div>
-                <div class="member-role">Software Engineer</div>
+                <div class="member-name">Doğukan Demirhan</div>
+                <div class="member-role member-electronics">Electronics Team Member</div>
                 <div class="linkedin-container">
-                    <a href="#"><img class="linkedin-logo" src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn"></a>
+                    <a href="https://www.linkedin.com/in/do%C4%9Fukan-demirhan-367767231/" target="_blank"><img class="linkedin-logo" src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn"></a>
                 </div>
             </div>
         </div>
@@ -88,10 +88,10 @@
                 <img src="umut.png" alt="Member 1">
             </div>
             <div class="member-info">
-                <div class="member-name">John Doe</div>
-                <div class="member-role">Software Engineer</div>
+                <div class="member-name">Umut Şengüç</div>
+                <div class="member-role member-electronics">Electronics Team Member</div>
                 <div class="linkedin-container">
-                    <a href="#"><img class="linkedin-logo" src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn"></a>
+                    <a href="https://www.linkedin.com/in/umut-%C5%9Feng%C3%BC%C3%A7-82a567253/" target="_blank"><img class="linkedin-logo" src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn"></a>
                 </div>
             </div>
         </div>
@@ -100,10 +100,10 @@
                 <img src="tunay.png" alt="Member 1">
             </div>
             <div class="member-info">
-                <div class="member-name">John Doe</div>
-                <div class="member-role">Software Engineer</div>
+                <div class="member-name">Tunay Angin</div>
+                <div class="member-role member-electronics">Electronics Team Member</div>
                 <div class="linkedin-container">
-                    <a href="#"><img class="linkedin-logo" src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn"></a>
+                    <a href="https://www.linkedin.com/in/tunay-angin/" target="_blank"><img class="linkedin-logo" src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn"></a>
                 </div>
             </div>
         </div>
@@ -112,5 +112,97 @@
 
     <footer class="footer" style="background-color: #004D7F; color: white; height: 60px;">
     </footer>
+
+    <script>
+        // Function to handle language selection
+        function selectLanguage(countryCode, language) {
+            document.getElementById('selectedLanguage').innerHTML = '<img class="flag" src="https://flagcdn.com/64x48/' + countryCode + '.png" alt="' + countryCode.toUpperCase() + ' Flag"> ' + language;
+            if (countryCode === 'us') {
+                us();
+            } else if (countryCode === 'tr') {
+                tr();
+            }
+        }
+
+        const langObject = {
+            nav: {
+                about: ["About", "Hakkımızda"],
+                team: ["Team", "Ekip"],
+                contact: ["Contact", "İletişim"],
+                apply: ["Apply", "Başvur"]
+            },
+
+            titles: {
+                captain: ["Team Captain", "Takım kaptanı"],
+                electronics: ["Electronics Team Member", "Elektronik Takımı Üyesi"],
+                software: ["Software Team Member", "Yazılım Takımı Üyesi"]
+            }
+        }
+
+        if(localStorage.getItem('KOU-lang') == "tr"){
+            tr();
+            selectLanguage('tr', 'Türkçe')
+        }
+
+        // Function to execute when US flag is selected
+        function us() {
+            localStorage.setItem('KOU-lang', 'en');
+            // Your logic for when US flag is selected
+            console.log('US flag selected');
+            document.getElementById("nav-item-about").textContent = langObject.nav.about[0]
+            document.getElementById("nav-item-team").textContent = langObject.nav.team[0]
+            document.getElementById("nav-item-contact").textContent = langObject.nav.contact[0]
+            document.getElementById("nav-item-apply").textContent = langObject.nav.apply[0]
+
+            // Get all elements with the class "member-software"
+            const softwares = document.querySelectorAll('.member-software');
+            const captain = document.querySelectorAll('.member-captain');
+            const electronics = document.querySelectorAll('.member-electronics');
+
+            // Loop through each element and change its inner text to "x"
+            softwares.forEach(element => {
+                element.innerText = langObject.titles.software[0];
+            });
+
+            captain.forEach(element => {
+                element.innerText = langObject.titles.captain[0];
+            });
+
+            electronics.forEach(element => {
+                element.innerText = langObject.titles.electronics[0];
+            });
+        }
+    
+        // Function to execute when Turkish flag is selected
+        function tr() {
+            localStorage.setItem('KOU-lang', 'tr');
+            // Your logic for when Turkish flag is selected
+            console.log('Turkish flag selected');
+            document.getElementById("nav-item-about").textContent = langObject.nav.about[1]
+            document.getElementById("nav-item-team").textContent = langObject.nav.team[1]
+            document.getElementById("nav-item-contact").textContent = langObject.nav.contact[1]
+            document.getElementById("nav-item-apply").textContent = langObject.nav.apply[1]
+        
+        
+            // Get all elements with the class "member-software"
+            const softwares = document.querySelectorAll('.member-software');
+            const captain = document.querySelectorAll('.member-captain');
+            const electronics = document.querySelectorAll('.member-electronics');
+
+            // Loop through each element and change its inner text to "x"
+            softwares.forEach(element => {
+                element.innerText = langObject.titles.software[1];
+            });
+
+            captain.forEach(element => {
+                element.innerText = langObject.titles.captain[1];
+            });
+
+            electronics.forEach(element => {
+                element.innerText = langObject.titles.electronics[1];
+            });
+        }
+
+    </script>
 </body>
 </html>
