@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="hero.css">
     <link rel="stylesheet" href="about.css">
     <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="sponsor.css">
      <!-- Flag icons CSS -->
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css">
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -21,6 +22,7 @@
         <ul class="navbar-nav">
             <li><a href="#about" id="nav-item-about">About Us</a></li>
             <li><a href="./team.html" id="nav-item-team">Team</a></li>
+            <li><a href="#sponsors" id="nav-item-sponsor">Sponsors</a></li>
             <li><a href="#contact" id="nav-item-contact">Contact</a></li>
             <li><a href="https://docs.google.com/forms/d/1_XBtqQmpH598Z_V-FLmpnZ16NKAm9jhbIUt3OHWQqEE/edit" id="nav-item-apply" class="active">Apply</a></li>
             <li>
@@ -52,6 +54,17 @@
             <p class="hero-subtitle" id="hero-item-subtitle">Unmanned Aerial Vehicle Team</p>
         </div>
     </div>
+
+    <!-- Sponsors Section -->
+    <section class="sponsors" id="sponsors">
+        <h2 id="sponsor-text">Our Sponsors</h2>
+        <div class="sponsor-images">
+            <img src="sponsor1.jpeg" alt="Sponsor 1">
+            <img src="sponsor2.jpeg" alt="Sponsor 2">
+            <img src="sponsor3.jpeg" alt="Sponsor 3">
+            <img src="sponsor4.jpeg" alt="Sponsor 4">
+        </div>
+    </section>
 
     <!-- About Us section -->
     <section class="about-section" id="about">
@@ -109,7 +122,8 @@
                 about: ["About", "Hakkımızda"],
                 team: ["Team", "Ekip"],
                 contact: ["Contact", "İletişim"],
-                apply: ["Apply", "Başvur"]
+                apply: ["Apply", "Başvur"],
+                sponsor: ["Sponsors", "Sponsorlarımız"]
             },
 
             hero: {
@@ -135,6 +149,10 @@
                 name: ["Your Name", "Adınız"],
                 message: ["Your Message", "Mesajınız"],
                 email: ["Your Email", "E-posta adresiniz"]
+            },
+
+            sponsor: {
+                text: ["Our Sponsors", "Sponsorlarımız"]
             }
         }
     
@@ -152,6 +170,7 @@
             document.getElementById("nav-item-team").textContent = langObject.nav.team[0]
             document.getElementById("nav-item-contact").textContent = langObject.nav.contact[0]
             document.getElementById("nav-item-apply").textContent = langObject.nav.apply[0]
+            document.getElementById("nav-item-sponsor").textContent = langObject.nav.sponsor[0]
 
             document.getElementById("hero-item-title").textContent = langObject.hero.title[0]
             document.getElementById("hero-item-subtitle").textContent = langObject.hero.subtitle[0]
@@ -167,6 +186,8 @@
             document.getElementById("message-name").textContent = langObject.form.name[0]
             document.getElementById("message-email").textContent = langObject.form.email[0]
             document.getElementById("message-text").textContent = langObject.form.message[0]
+
+            document.getElementById("sponsor-text").textContent = langObject.sponsor.text[0]
         }
     
         // Function to execute when Turkish flag is selected
@@ -178,6 +199,7 @@
             document.getElementById("nav-item-team").textContent = langObject.nav.team[1]
             document.getElementById("nav-item-contact").textContent = langObject.nav.contact[1]
             document.getElementById("nav-item-apply").textContent = langObject.nav.apply[1]
+            document.getElementById("nav-item-sponsor").textContent = langObject.nav.sponsor[1]
 
             document.getElementById("hero-item-title").textContent = langObject.hero.title[1]
             document.getElementById("hero-item-subtitle").textContent = langObject.hero.subtitle[1]
@@ -193,6 +215,8 @@
             document.getElementById("message-name").placeholder = langObject.form.name[1]
             document.getElementById("message-email").placeholder = langObject.form.email[1]
             document.getElementById("message-text").placeholder = langObject.form.message[1]
+
+            document.getElementById("sponsor-text").textContent = langObject.sponsor.text[1]
         }
 
         document.addEventListener('DOMContentLoaded', function () {

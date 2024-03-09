@@ -15,6 +15,9 @@
         <ul class="navbar-nav">
             <li><a href="./index.html#about" id="nav-item-about">About Us</a></li>
             <li><a href="#" id="nav-item-team">Team</a></li>
+            <!-- <li><a href="./sponsors.html" id="nav-item-contact">Projects</a></li>
+            <li><a href="./gallery.html" id="nav-item-contact">Gallery</a></li> -->
+            <li><a href="./index.html#sponsors" id="nav-item-sponsor">Sponsors</a></li>
             <li><a href="./index.html#contact" id="nav-item-contact">Contact</a></li>
             <li><a href="https://docs.google.com/forms/d/1_XBtqQmpH598Z_V-FLmpnZ16NKAm9jhbIUt3OHWQqEE/edit" id="nav-item-apply" class="active">Apply</a></li>
             <li>
@@ -61,25 +64,13 @@
         </div>
         <div class="member-card">
             <div class="image-container">
-                <img src="furkan.png" alt="Member 1">
+                <img src="tunay.png" alt="Member 1">
             </div>
             <div class="member-info">
-                <div class="member-name">Muhammet Furkan Özbek</div>
-                <div class="member-role member-software">Software Team Member</div>
+                <div class="member-name">Tunay Angin</div>
+                <div class="member-role member-organizaton">Organizational Team Member</div>
                 <div class="linkedin-container">
-                    <a href="https://www.linkedin.com/in/furrkanozbek/" target="_blank"><img class="linkedin-logo" src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn"></a>
-                </div>
-            </div>
-        </div>
-        <div class="member-card">
-            <div class="image-container">
-                <img src="goksun.png" alt="Member 1">
-            </div>
-            <div class="member-info">
-                <div class="member-name">Göksun Çaltıllı</div>
-                <div class="member-role member-electronics">Electronics Team Member</div>
-                <div class="linkedin-container">
-                    <a href="https://www.linkedin.com/in/g%C3%B6ksun-%C3%A7alt%C4%B1ll%C4%B1-9a8521287/" target="_blank"><img class="linkedin-logo" src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn"></a>
+                    <a href="https://www.linkedin.com/in/tunay-angin/" target="_blank"><img class="linkedin-logo" src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn"></a>
                 </div>
             </div>
         </div>
@@ -97,6 +88,18 @@
         </div>
         <div class="member-card">
             <div class="image-container">
+                <img src="goksun.png" alt="Member 1">
+            </div>
+            <div class="member-info">
+                <div class="member-name">Göksun Çaltıllı</div>
+                <div class="member-role member-electronics">Electronics Team Member</div>
+                <div class="linkedin-container">
+                    <a href="https://www.linkedin.com/in/g%C3%B6ksun-%C3%A7alt%C4%B1ll%C4%B1-9a8521287/" target="_blank"><img class="linkedin-logo" src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn"></a>
+                </div>
+            </div>
+        </div>
+        <div class="member-card">
+            <div class="image-container">
                 <img src="dogukan.png" alt="Member 1">
             </div>
             <div class="member-info">
@@ -107,15 +110,16 @@
                 </div>
             </div>
         </div>
+
         <div class="member-card">
             <div class="image-container">
-                <img src="tunay.png" alt="Member 1">
+                <img src="furkan.png" alt="Member 1">
             </div>
             <div class="member-info">
-                <div class="member-name">Tunay Angin</div>
-                <div class="member-role member-organizaton">Organizational Team Member</div>
+                <div class="member-name">Muhammet Furkan Özbek</div>
+                <div class="member-role member-software">Software Team Member</div>
                 <div class="linkedin-container">
-                    <a href="https://www.linkedin.com/in/tunay-angin/" target="_blank"><img class="linkedin-logo" src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn"></a>
+                    <a href="https://www.linkedin.com/in/furrkanozbek/" target="_blank"><img class="linkedin-logo" src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn"></a>
                 </div>
             </div>
         </div>
@@ -141,7 +145,8 @@
                 about: ["About", "Hakkımızda"],
                 team: ["Team", "Ekip"],
                 contact: ["Contact", "İletişim"],
-                apply: ["Apply", "Başvur"]
+                apply: ["Apply", "Başvur"],
+                sponsor: ["Sponsors", "Sponsorlarımız"]
             },
 
             titles: {
@@ -167,6 +172,7 @@
             document.getElementById("nav-item-team").textContent = langObject.nav.team[0]
             document.getElementById("nav-item-contact").textContent = langObject.nav.contact[0]
             document.getElementById("nav-item-apply").textContent = langObject.nav.apply[0]
+            document.getElementById("nav-item-sponsor").textContent = langObject.nav.sponsor[0]
 
             // Get all elements with the class "member-software"
             const softwares = document.querySelectorAll('.member-software');
@@ -206,6 +212,7 @@
             document.getElementById("nav-item-team").textContent = langObject.nav.team[1]
             document.getElementById("nav-item-contact").textContent = langObject.nav.contact[1]
             document.getElementById("nav-item-apply").textContent = langObject.nav.apply[1]
+            document.getElementById("nav-item-sponsor").textContent = langObject.nav.sponsor[1]
         
         
             // Get all elements with the class "member-software"

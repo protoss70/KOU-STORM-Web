@@ -6,6 +6,7 @@
             align-items: center;
             flex-direction: row-reverse; /* Reverses the order of items */
             text-align: left;
+            background-color: #F2F2F2;
         }
 
         .about-image {
