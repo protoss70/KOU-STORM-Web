@@ -5,19 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KOU STORM</title>
 
-    <link rel="icon" type="image/png" href="logo.svg">
-    <link rel="stylesheet" href="navbar.css">
-    <link rel="stylesheet" href="hero.css">
-    <link rel="stylesheet" href="about.css">
-    <link rel="stylesheet" href="contact.css">
-    <link rel="stylesheet" href="sponsor.css">
+    <link rel="icon" type="image/png" href="./assets/logo.svg">
+    <link rel="stylesheet" href="./styles/navbar.css">
+    <link rel="stylesheet" href="./styles/hero.css">
+    <link rel="stylesheet" href="./styles/about.css">
+    <link rel="stylesheet" href="./styles/contact.css">
+    <link rel="stylesheet" href="./styles/sponsor.css">
      <!-- Flag icons CSS -->
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css">
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <nav class="navbar">
-        <a href="./index.html" class="navbar-brand"><img src="logobeyaz.png" class="nav-logo" align="left" title="koustorm.com"></a>
+        <a href="./index.html" class="navbar-brand"><img src="./assets/logobeyaz.png" class="nav-logo" align="left" title="koustorm.com"></a>
         <button class="hamburger">&#9776;</button>
         <ul class="navbar-nav">
             <li><a href="#about" id="nav-item-about">About Us</a></li>
@@ -45,7 +45,7 @@
 
     <div class="hero-section">
         <video class="hero-video" autoplay loop muted>
-            <source src="stormvideo.mp4" type="video/mp4">
+            <source src="./assets/stormvideo.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
         <div class="hero-overlay"></div>
@@ -59,10 +59,10 @@
     <section class="sponsors" id="sponsors">
         <h2 id="sponsor-text">Our Sponsors</h2>
         <div class="sponsor-images">
-            <img src="sponsor1.jpeg" alt="Sponsor 1">
-            <img src="sponsor2.jpeg" alt="Sponsor 2">
-            <img src="sponsor3.jpeg" alt="Sponsor 3">
-            <img src="sponsor4.jpeg" alt="Sponsor 4">
+            <img src="./assets/sponsor1.jpeg" alt="Sponsor 1">
+            <img src="./assets/sponsor2.jpeg" alt="Sponsor 2">
+            <img src="./assets/sponsor3.jpeg" alt="Sponsor 3">
+            <img src="./assets/sponsor4.jpeg" alt="Sponsor 4">
         </div>
     </section>
 
@@ -75,7 +75,7 @@
                 <a href="./team.html" class="btn-our-team" id="about-item-team-description">Our Team</a>
             </div>
         </div>
-        <img src="Frame 4.png" alt="About Us Image" class="about-image" width="750">
+        <img src="./assets/Frame 4.png" alt="About Us Image" class="about-image" width="750">
     </section>
 
 
@@ -112,7 +112,9 @@
             document.getElementById('selectedLanguage').innerHTML = '<img class="flag" src="https://flagcdn.com/64x48/' + countryCode + '.png" alt="' + countryCode.toUpperCase() + ' Flag"> ' + language;
             if (countryCode === 'us') {
                 us();
-            } else if (countryCode === 'tr') {
+            } else if (countryCode === 'tr')
+
+ {
                 tr();
             }
         }
@@ -245,3 +247,6 @@
     </script>
 </body>
 </html>
+```
+
+This code includes the corrected paths for images and CSS files, ensuring that they are properly linked to your HTML file.
