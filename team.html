@@ -53,7 +53,7 @@
             </div>
             <div class="member-info">
                 <div class="member-name">Ruşin Ak</div>
-                <div class="member-role member-electronics">Electronics Team Member</div>
+                <div class="member-role member-organizaton">Organizational Team Member</div>
                 <div class="linkedin-container">
                     <a href="https://www.linkedin.com/in/ru%C5%9Fin-ak111/" target="_blank"><img class="linkedin-logo" src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn"></a>
                 </div>
@@ -73,11 +73,23 @@
         </div>
         <div class="member-card">
             <div class="image-container">
+                <img src="goksun.png" alt="Member 1">
+            </div>
+            <div class="member-info">
+                <div class="member-name">Göksun Çaltıllı</div>
+                <div class="member-role member-electronics">Electronics Team Member</div>
+                <div class="linkedin-container">
+                    <a href="https://www.linkedin.com/in/g%C3%B6ksun-%C3%A7alt%C4%B1ll%C4%B1-9a8521287/" target="_blank"><img class="linkedin-logo" src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn"></a>
+                </div>
+            </div>
+        </div>
+        <div class="member-card">
+            <div class="image-container">
                 <img src="umut.png" alt="Member 1">
             </div>
             <div class="member-info">
                 <div class="member-name">Doğukan Demirhan</div>
-                <div class="member-role member-electronics">Electronics Team Member</div>
+                <div class="member-role member-mechanics">Mechanical Team Member</div>
                 <div class="linkedin-container">
                     <a href="https://www.linkedin.com/in/do%C4%9Fukan-demirhan-367767231/" target="_blank"><img class="linkedin-logo" src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn"></a>
                 </div>
@@ -101,7 +113,7 @@
             </div>
             <div class="member-info">
                 <div class="member-name">Tunay Angin</div>
-                <div class="member-role member-electronics">Electronics Team Member</div>
+                <div class="member-role member-organizaton">Organizational Team Member</div>
                 <div class="linkedin-container">
                     <a href="https://www.linkedin.com/in/tunay-angin/" target="_blank"><img class="linkedin-logo" src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn"></a>
                 </div>
@@ -110,7 +122,7 @@
         <!-- Add more member cards here -->
     </div>
 
-    <footer class="footer" style="background-color: #004D7F; color: white; height: 60px;">
+    <footer class="footer" style="background-color: #010080; color: white; height: 60px;">
     </footer>
 
     <script>
@@ -134,8 +146,10 @@
 
             titles: {
                 captain: ["Team Captain", "Takım kaptanı"],
-                electronics: ["Electronics Team Member", "Elektronik Takımı Üyesi"],
-                software: ["Software Team Member", "Yazılım Takımı Üyesi"]
+                electronics: ["Electronics Team Member", "Elektronik Ekibi Üyesi"],
+                software: ["Software Team Member", "Yazılım Ekibi Üyesi"],
+                organization: ["Organizational Team Member", "Organizasyon Ekibi Üyesi"],
+                mechanic: ["Mechanical Team Member", "Mekanik Ekibi Üyesi"]
             }
         }
 
@@ -158,6 +172,8 @@
             const softwares = document.querySelectorAll('.member-software');
             const captain = document.querySelectorAll('.member-captain');
             const electronics = document.querySelectorAll('.member-electronics');
+            const organization = document.querySelectorAll('.member-organizaton');
+            const mechanic = document.querySelectorAll('.member-mechanics');
 
             // Loop through each element and change its inner text to "x"
             softwares.forEach(element => {
@@ -170,6 +186,14 @@
 
             electronics.forEach(element => {
                 element.innerText = langObject.titles.electronics[0];
+            });
+
+            organization.forEach(element => {
+                element.innerText = langObject.titles.organization[0];
+            });
+
+            organization.forEach(element => {
+                element.innerText = langObject.titles.mechanic[0];
             });
         }
     
@@ -188,6 +212,8 @@
             const softwares = document.querySelectorAll('.member-software');
             const captain = document.querySelectorAll('.member-captain');
             const electronics = document.querySelectorAll('.member-electronics');
+            const organization = document.querySelectorAll('.member-organizaton');
+            const mechanic = document.querySelectorAll('.member-mechanics');
 
             // Loop through each element and change its inner text to "x"
             softwares.forEach(element => {
@@ -200,6 +226,14 @@
 
             electronics.forEach(element => {
                 element.innerText = langObject.titles.electronics[1];
+            });
+
+            organization.forEach(element => {
+                element.innerText = langObject.titles.organization[1];
+            });
+
+            mechanic.forEach(element => {
+                element.innerText = langObject.titles.mechanic[1];
             });
         }
         
