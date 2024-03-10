@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KOU STORM</title>
+    <title id="title">KOU STORM - Home</title>
 
     <link rel="icon" type="image/png" href="./assets/logo.svg">
     <link rel="stylesheet" href="./styles/navbar.css">
@@ -22,6 +22,7 @@
         <ul class="navbar-nav">
             <li><a href="#about" id="nav-item-about">About Us</a></li>
             <li><a href="./team.html" id="nav-item-team">Team</a></li>
+            <li><a href="./gallery.html" id="nav-item-gallery">Gallery</a></li>
             <li><a href="#sponsors" id="nav-item-sponsor">Sponsors</a></li>
             <li><a href="#contact" id="nav-item-contact">Contact</a></li>
             <li><a href="https://docs.google.com/forms/d/1_XBtqQmpH598Z_V-FLmpnZ16NKAm9jhbIUt3OHWQqEE/edit" id="nav-item-apply" class="active">Apply</a></li>
@@ -58,11 +59,19 @@
     <!-- Sponsors Section -->
     <section class="sponsors" id="sponsors">
         <h2 id="sponsor-text">Our Sponsors</h2>
-        <div class="sponsor-images">
-            <img src="./assets/sponsor1.jpeg" alt="Sponsor 1">
-            <img src="./assets/sponsor2.jpeg" alt="Sponsor 2">
-            <img src="./assets/sponsor3.jpeg" alt="Sponsor 3">
-            <img src="./assets/sponsor4.jpeg" alt="Sponsor 4">
+        <div class="gallery">
+            <img src="./assets/gallery.jpg" alt="Image" class="gallery-image">
+            <img src="./assets/gallery_(2).jpg" alt="Image" class="gallery-image">
+            <img src="./assets/gallery_(3).jpg" alt="Image" class="gallery-image">
+            <img src="./assets/gallery_(4).jpg" alt="Image" class="gallery-image">
+            <img src="./assets/gallery_(5).jpg" alt="Image" class="gallery-image">
+            <img src="./assets/gallery_(6).jpg" alt="Image" class="gallery-image">
+            <img src="./assets/gallery_(7).jpg" alt="Image" class="gallery-image">
+            <img src="./assets/gallery_(8).jpg" alt="Image" class="gallery-image">
+            <img src="./assets/gallery_(9).jpg" alt="Image" class="gallery-image">
+            <img src="./assets/gallery_(10).jpg" alt="Image" class="gallery-image">
+            <img src="./assets/gallery_(11).jpg" alt="Image" class="gallery-image">
+            <img src="./assets/gallery_(12).jpg" alt="Image" class="gallery-image">
         </div>
     </section>
 
@@ -120,12 +129,15 @@
         }
 
         const langObject = {
+            title: ["KOU STORM - Home", "KOU STORM - Anasayfa"],
+
             nav: {
                 about: ["About", "Hakkımızda"],
                 team: ["Team", "Ekip"],
                 contact: ["Contact", "İletişim"],
                 apply: ["Apply", "Başvur"],
-                sponsor: ["Sponsors", "Sponsorlarımız"]
+                sponsor: ["Sponsors", "Sponsorlarımız"],
+                gallery: ["Gallery", "Galeri"]
             },
 
             hero: {
@@ -168,11 +180,13 @@
             localStorage.setItem('KOU-lang', 'en');
             // Your logic for when US flag is selected
             console.log('US flag selected');
+            document.getElementById("title").textContent = langObject.title[0]
             document.getElementById("nav-item-about").textContent = langObject.nav.about[0]
             document.getElementById("nav-item-team").textContent = langObject.nav.team[0]
             document.getElementById("nav-item-contact").textContent = langObject.nav.contact[0]
             document.getElementById("nav-item-apply").textContent = langObject.nav.apply[0]
             document.getElementById("nav-item-sponsor").textContent = langObject.nav.sponsor[0]
+            document.getElementById("nav-item-gallery").textContent = langObject.nav.gallery[0]
 
             document.getElementById("hero-item-title").textContent = langObject.hero.title[0]
             document.getElementById("hero-item-subtitle").textContent = langObject.hero.subtitle[0]
@@ -197,11 +211,14 @@
             localStorage.setItem('KOU-lang', 'tr');
             // Your logic for when Turkish flag is selected
             console.log('Turkish flag selected');
+            document.getElementById("title").textContent = langObject.title[1]
+
             document.getElementById("nav-item-about").textContent = langObject.nav.about[1]
             document.getElementById("nav-item-team").textContent = langObject.nav.team[1]
             document.getElementById("nav-item-contact").textContent = langObject.nav.contact[1]
             document.getElementById("nav-item-apply").textContent = langObject.nav.apply[1]
             document.getElementById("nav-item-sponsor").textContent = langObject.nav.sponsor[1]
+            document.getElementById("nav-item-gallery").textContent = langObject.nav.gallery[1]
 
             document.getElementById("hero-item-title").textContent = langObject.hero.title[1]
             document.getElementById("hero-item-subtitle").textContent = langObject.hero.subtitle[1]
@@ -244,6 +261,18 @@
         const message = document.getElementById("message-text").value;
         
     });
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const images = document.querySelectorAll('.gallery-image');
+
+            images.forEach(image => {
+                image.addEventListener('click', function () {
+                    image.classList.toggle('expanded');
+                });
+            });
+        });
     </script>
 </body>
 </html>

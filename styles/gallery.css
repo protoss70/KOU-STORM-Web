@@ -1,0 +1,79 @@
+/* Basic styling */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Gallery styling */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
+    padding: 20px;
+}
+
+/* Image styling */
+.gallery img {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease; /* Added transition for hover effect */
+}
+
+/* Hover effect */
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+/* Lightbox container */
+.lightbox {
+    display: none; /* Hide by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8); /* Transparent black overlay */
+    z-index: 1000;
+}
+
+/* Full-size image */
+.lightbox img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 90%;
+    max-height: 90%;
+}
+
+/* Navigation arrows */
+.lightbox .prev,
+.lightbox .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: white;
+    font-size: 24px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    outline: none;
+    transition: background-color 0.3s ease; /* Added transition for hover effect */
+}
+
+/* Arrow hover effect */
+.lightbox .prev:hover,
+.lightbox .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Positioning of navigation arrows */
+.lightbox .prev {
+    left: 10px;
+}
+
+.lightbox .next {
+    right: 10px;
+}

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Flag icons CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title id="title">Kou Storm - Gallery</title>
+    <link rel="icon" type="image/png" href="./assets/logo.svg">
+
+    <link rel="stylesheet" href="./styles/navbar.css">
+    <link rel="stylesheet" href="./styles/gallery.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="./index.html" class="navbar-brand"><img src="./assets/logobeyaz.png" class="nav-logo" align="left" title="koustorm.com"></a>
+        <button class="hamburger">&#9776;</button>
+        <ul class="navbar-nav">
+            <li><a href="./index.html#about" id="nav-item-about">About Us</a></li>
+            <li><a href="./team.html" id="nav-item-team">Team</a></li>
+            <li><a href="#" id="nav-item-gallery">Gallery</a></li>
+            <li><a href="./index.html#sponsors" id="nav-item-sponsor">Sponsors</a></li>
+            <li><a href="./index.html#contact" id="nav-item-contact">Contact</a></li>
+            <li><a href="https://docs.google.com/forms/d/1_XBtqQmpH598Z_V-FLmpnZ16NKAm9jhbIUt3OHWQqEE/edit" id="nav-item-apply" class="active">Apply</a></li>
+            <li>
+                <div class="dropdown">
+                    <button class="dropdown-button" id="selectedLanguage">
+                        <img class="flag" src="https://flagcdn.com/64x48/us.png" alt="US Flag"> English
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="#" onclick="selectLanguage('us', 'English')">
+                            <img class="flag" src="https://flagcdn.com/64x48/us.png" alt="US Flag"> English
+                        </a>
+                        <a href="#" onclick="selectLanguage('tr', 'Türkçe')">
+                            <img class="flag" src="https://flagcdn.com/64x48/tr.png" alt="TR Flag"> Türkçe
+                        </a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="gallery">
+        <!-- Replace these image sources with your team members' photos -->
+        <img src="./assets/gallery.jpg" alt="Image">
+        <img src="./assets/gallery_(2).jpg" alt="Image">
+        <img src="./assets/gallery_(3).jpg" alt="Image">
+        <img src="./assets/gallery_(4).jpg" alt="Image">
+        <img src="./assets/gallery_(5).jpg" alt="Image">
+        <img src="./assets/gallery_(6).jpg" alt="Image">
+        <img src="./assets/gallery_(7).jpg" alt="Image">
+        <img src="./assets/gallery_(8).jpg" alt="Image">
+        <img src="./assets/gallery_(9).jpg" alt="Image">
+        <img src="./assets/gallery_(10).jpg" alt="Image">
+        <img src="./assets/gallery_(11).jpg" alt="Image">
+        <img src="./assets/gallery_(12).jpg" alt="Image">
+        <!-- Add more images as needed -->
+    </div>
+
+    <div class="lightbox">
+        <span class="prev">&#10094;</span>
+        <span class="next">&#10095;</span>
+        <img src="" alt="Image">
+    </div>
+
+    <footer class="footer" style="background-color: #010080; color: white; height: 60px;"></footer>
+    <script>
+        // Function to handle language selection
+        function selectLanguage(countryCode, language) {
+            document.getElementById('selectedLanguage').innerHTML = '<img class="flag" src="https://flagcdn.com/64x48/' + countryCode + '.png" alt="' + countryCode.toUpperCase() + ' Flag"> ' + language;
+            if (countryCode === 'us') {
+                us();
+            } else if (countryCode === 'tr')
+
+ {
+                tr();
+            }
+        }
+
+        const langObject = {
+            title: ["KOU STORM - Gallery", "KOU STORM - Galeri"],
+
+            nav: {
+                about: ["About", "Hakkımızda"],
+                team: ["Team", "Ekip"],
+                contact: ["Contact", "İletişim"],
+                apply: ["Apply", "Başvur"],
+                sponsor: ["Sponsors", "Sponsorlarımız"],
+                gallery: ["Gallery", "Galeri"]
+            },
+        }
+    
+        if(localStorage.getItem('KOU-lang') == "tr"){
+            tr();
+            selectLanguage('tr', 'Türkçe')
+        }
+
+        // Function to execute when US flag is selected
+        function us() {
+            localStorage.setItem('KOU-lang', 'en');
+            // Your logic for when US flag is selected
+            console.log('US flag selected');
+            document.getElementById("title").textContent = langObject.title[0]
+
+            
+
+            document.getElementById("nav-item-about").textContent = langObject.nav.about[0]
+            document.getElementById("nav-item-team").textContent = langObject.nav.team[0]
+            document.getElementById("nav-item-contact").textContent = langObject.nav.contact[0]
+            document.getElementById("nav-item-apply").textContent = langObject.nav.apply[0]
+            document.getElementById("nav-item-sponsor").textContent = langObject.nav.sponsor[0]
+            document.getElementById("nav-item-gallery").textContent = langObject.nav.gallery[0]
+        }
+    
+        // Function to execute when Turkish flag is selected
+        function tr() {
+            localStorage.setItem('KOU-lang', 'tr');
+            // Your logic for when Turkish flag is selected
+            console.log('Turkish flag selected');
+            document.getElementById("title").textContent = langObject.title[1]
+            
+
+            document.getElementById("nav-item-about").textContent = langObject.nav.about[1]
+            document.getElementById("nav-item-team").textContent = langObject.nav.team[1]
+            document.getElementById("nav-item-contact").textContent = langObject.nav.contact[1]
+            document.getElementById("nav-item-apply").textContent = langObject.nav.apply[1]
+            document.getElementById("nav-item-sponsor").textContent = langObject.nav.sponsor[1]
+            document.getElementById("nav-item-gallery").textContent = langObject.nav.gallery[1]
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            var hamburger = document.querySelector('.hamburger');
+            var navbar = document.querySelector('.navbar-nav');
+
+            hamburger.addEventListener('click', function () {
+                navbar.classList.toggle('active');
+            });
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+        const images = document.querySelectorAll('.gallery img');
+        const lightbox = document.querySelector('.lightbox');
+        const lightboxImg = document.querySelector('.lightbox img');
+        let currentIndex = 0;
+
+        // Open lightbox and display clicked image
+        images.forEach((image, index) => {
+            image.addEventListener('click', function () {
+                lightbox.style.display = 'block';
+                lightboxImg.src = this.src;
+                currentIndex = index;
+            });
+        });
+
+        // Close lightbox when clicking outside of the image
+        lightbox.addEventListener('click', function (event) {
+            if (event.target === this) {
+                this.style.display = 'none';
+            }
+        });
+
+        function changeImage(next){
+            if (!next){
+                if (currentIndex > 0) {
+                    currentIndex--;
+                }else {
+                    currentIndex = images.length - 1;
+                }
+                lightboxImg.src = images[currentIndex].src;
+            }else{
+                if (currentIndex < images.length - 1) {
+                currentIndex++;
+                }else{
+                    currentIndex = 0;
+                }
+                lightboxImg.src = images[currentIndex].src;
+            }
+        }
+
+        // Navigate to previous image
+        document.querySelector('.lightbox .prev').addEventListener('click', function () {
+            changeImage(false);
+        });
+
+        // Navigate to next image
+        document.querySelector('.lightbox .next').addEventListener('click', function () {
+            changeImage(true);
+        });
+
+        // Keyboard navigation event listener
+        document.addEventListener('keydown', function (event) {
+            if (event.keyCode === 37) { // Left arrow key
+                changeImage(false);
+            } else if (event.keyCode === 39) { // Right arrow key
+                changeImage(true);
+            }
+            
+            });
+        });
+    </script>
+</body>
+</html>

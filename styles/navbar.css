@@ -1,6 +1,6 @@
 body{
     margin: 0;
-    margin-top: 80px;
+    margin-top: 80px !important;
     font-family: 'Roboto', sans-serif;
     background-color: white;
 }
@@ -157,6 +157,13 @@ body{
     .navbar-nav li {
         width: 100%;
         text-align: center;
+        height: 70px;
+        line-height: 70px; /* Vertically center the links */
+    }
+
+    .navbar-nav li a {
+        height: 70px;
+        line-height: 70px;
     }
 
     .hamburger {

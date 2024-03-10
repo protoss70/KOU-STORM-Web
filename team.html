@@ -6,7 +6,7 @@
     <link rel="icon" type="image/png" href="./assets/logo.svg">
     <link rel="stylesheet" href="./styles/member.css">
     <link rel="stylesheet" href="./styles/navbar.css">
-    <title>KOU STORM</title>
+    <title id="title">KOU STORM - Team</title>
 </head>
 <body>
     <nav class="navbar">
@@ -15,8 +15,8 @@
         <ul class="navbar-nav">
             <li><a href="./index.html#about" id="nav-item-about">About Us</a></li>
             <li><a href="#" id="nav-item-team">Team</a></li>
-            <!-- <li><a href="./sponsors.html" id="nav-item-contact">Projects</a></li>
-            <li><a href="./gallery.html" id="nav-item-contact">Gallery</a></li> -->
+            <!-- <li><a href="./sponsors.html" id="nav-item-contact">Projects</a></li> -->
+            <li><a href="./gallery.html" id="nav-item-gallery">Gallery</a></li>
             <li><a href="./index.html#sponsors" id="nav-item-sponsor">Sponsors</a></li>
             <li><a href="./index.html#contact" id="nav-item-contact">Contact</a></li>
             <li><a href="https://docs.google.com/forms/d/1_XBtqQmpH598Z_V-FLmpnZ16NKAm9jhbIUt3OHWQqEE/edit" id="nav-item-apply" class="active">Apply</a></li>
@@ -141,12 +141,14 @@
         }
 
         const langObject = {
+            title: ["KOU STROM - Team", "KOU STROM - Takım"],
             nav: {
                 about: ["About", "Hakkımızda"],
                 team: ["Team", "Ekip"],
                 contact: ["Contact", "İletişim"],
                 apply: ["Apply", "Başvur"],
-                sponsor: ["Sponsors", "Sponsorlarımız"]
+                sponsor: ["Sponsors", "Sponsorlarımız"],
+                gallery: ["Gallery", "Galeri"]
             },
 
             titles: {
@@ -173,6 +175,8 @@
             document.getElementById("nav-item-contact").textContent = langObject.nav.contact[0]
             document.getElementById("nav-item-apply").textContent = langObject.nav.apply[0]
             document.getElementById("nav-item-sponsor").textContent = langObject.nav.sponsor[0]
+            document.getElementById("nav-item-gallery").textContent = langObject.nav.gallery[0]
+            document.getElementById("title").textContent = langObject.title[0]
 
             // Get all elements with the class "member-software"
             const softwares = document.querySelectorAll('.member-software');
@@ -213,6 +217,8 @@
             document.getElementById("nav-item-contact").textContent = langObject.nav.contact[1]
             document.getElementById("nav-item-apply").textContent = langObject.nav.apply[1]
             document.getElementById("nav-item-sponsor").textContent = langObject.nav.sponsor[1]
+            document.getElementById("title").textContent = langObject.title[1]
+            document.getElementById("nav-item-gallery").textContent = langObject.nav.gallery[1]
         
         
             // Get all elements with the class "member-software"
